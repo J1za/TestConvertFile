@@ -78,7 +78,7 @@ const Header = ({type, title}) => {
   }
 
   const exportPdf = async () => {
-    let convertApi = ConvertApi.auth({secret: 'KBHoxKg3ER2bLvkr'})
+    let convertApi = ConvertApi.auth({secret: 'UGErrqAKex5ElxZ5'})
     let params = convertApi.createParams()
     params.add('Url', window.location.href + '?no_header');
     params.add('FileName', 'Audit report for ' + title);
