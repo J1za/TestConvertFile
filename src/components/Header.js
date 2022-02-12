@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import PropTypes from "prop-types";
 import styled from 'styled-components';
 
@@ -61,7 +61,7 @@ const Controls = styled.div`
 
 const ConvertApi = window.ConvertApi;
 
-const Header = ({type, title}) => {
+const Header = ({ type, title }) => {
   // eslint-disable-next-line no-unused-vars
   const [downloading, setDownloading] = useState(false);
   const overlay = document.getElementById("overlay");
@@ -78,12 +78,17 @@ const Header = ({type, title}) => {
   }
 
   const exportPdf = async () => {
-    let convertApi = ConvertApi.auth({secret: 'KBHoxKg3ER2bLvkr'})
+    let convertApi = ConvertApi.auth({ secret: 'UGErrqAKex5ElxZ5' })
     let params = convertApi.createParams()
     params.add('Url', window.location.href + '?no_header');
     params.add('FileName', 'Audit report for ' + title);
     params.add('ConversionDelay', '7');
     params.add('HideElements', '.header');
+    params.add('PageSize', 'legal');
+    params.add('PageRange', '1');
+    params.add('PageHeight', '1750');
+    params.add('Header', logo);
+
     setDownloading(true);
     let result = await convertApi.convert('web', 'pdf', params)
     downloadPdf(result.dto.Files[0].Url)
@@ -95,18 +100,18 @@ const Header = ({type, title}) => {
   }
 
   return (
-    <StyleWrapper className="header" style={{backgroundColor: type === 'footer' ? "#fff" : '#223D9E'}}>
+    <StyleWrapper className="header" style={{ backgroundColor: type === 'footer' ? "#fff" : '#223D9E' }}>
       <Container>
-        <a href="#"><img src={logo} alt="logo"/></a>
+        <a href="#"><img src={logo} alt="logo" /></a>
         {
           type === 'header' ? <Controls>
-            <img onClick={openModal} className="share" src={share} alt="share icon"/>
+            <img onClick={openModal} className="share" src={share} alt="share icon" />
             {
-              downloading ? <Downloading>Downloading...</Downloading> : <PdfExportBtn style={{cursor: 'pointer'}} onClick={exportPdf}><img src={pdf} alt="pdf export"/> <p>Export pdf</p></PdfExportBtn>
+              downloading ? <Downloading>Downloading...</Downloading> : <PdfExportBtn style={{ cursor: 'pointer' }} onClick={exportPdf}><img src={pdf} alt="pdf export" /> <p>Export pdf</p></PdfExportBtn>
             }
           </Controls>
             :
-          ''
+            ''
         }
 
         {

@@ -7,7 +7,6 @@ import AcSize from "./sections/AcSize";
 import BoxEl from "./sections/BoxEl";
 import AcInfo from "./sections/AcInfo";
 import Score from "./sections/Score";
-import logo from "../../images/logo.png";
 
 // Images
 import screen from "../../images/icons/screen.png";
@@ -289,9 +288,6 @@ const AuditScore = () => {
 
   return (
     <StyleWrapper>
-      <div className="--show-in-pdf" style={{ display: "none" }}>
-        <img src={logo} alt="logo" />
-      </div>
       <AcInfo />
       <Score score={score} />
       <Section>
