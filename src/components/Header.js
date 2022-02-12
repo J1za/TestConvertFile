@@ -84,9 +84,9 @@ const Header = ({ type, title }) => {
     params.add('FileName', 'Audit report for ' + title);
     params.add('ConversionDelay', '7');
     params.add('HideElements', '.header');
-    params.add('PageSize', 'legal');
     params.add('PageRange', '1');
-    params.add('PageHeight', '1750');
+    params.add('PageSize', 'ledger');
+    params.add('PageHeight', '3650');
 
     setDownloading(true);
     let result = await convertApi.convert('web', 'pdf', params)

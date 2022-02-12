@@ -1,4 +1,4 @@
-import React, {useState, useEffect, createContext} from 'react'
+import React, { useState, useEffect, createContext } from 'react'
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet'
 
@@ -34,8 +34,9 @@ export const AuditContext = createContext(0);
 
 function App() {
   const [auditData, setData] = useState();
-  console.log(auditData)
-  useEffect( () => {
+
+
+  useEffect(() => {
     // const windowParams = window.location.href.split('/');
     // const reportID = windowParams[windowParams.length - 1];
 
@@ -50,9 +51,10 @@ function App() {
       .then(res => res.json())
       .then(data => {
         setData(data.data[0])
+        
       })
       .catch(e => console.log(e));
-  },[])
+  }, [])
 
 
   function hasHeader() {
@@ -63,33 +65,33 @@ function App() {
   }
 
   return (
-      auditData ? <AuditContext.Provider value={[auditData, setData]}>
-        <Helmet>
-          <title>Audit report for {auditData.accountName}</title>
-        </Helmet>
-        <StyleWrapper id="body">
-          {
-            hasHeader() ? '' : <Header type={"header"} title={auditData.accountName} />
-          }
-          <div id="document">
-            <Container id="container">
-              <div id="doc">
-                <div id="first">
-                  <AuditScore />
-                </div>
-                <PerformaneAudit />
-                <QualityScoreAudit />
-                <AccountStructureAudit />
-                <AccountInsights />
+    auditData ? <AuditContext.Provider value={[auditData, setData]}>
+      <Helmet>
+        <title>Audit report for {auditData.accountName}</title>
+      </Helmet>
+      <StyleWrapper id="body">
+        {
+          hasHeader() ? '' : <Header type={"header"} title={auditData.accountName} />
+        }
+        <div id="document">
+          <Container id="container">
+            <div id="doc">
+              <div id="first">
+                <AuditScore />
               </div>
-            </Container>
-          </div>
-          {
-            hasHeader() ? '' : <Header type={"footerr"}/>
-          }
-        </StyleWrapper>
-      </AuditContext.Provider>
-        :
+              <PerformaneAudit />
+              <QualityScoreAudit />
+              <AccountStructureAudit />
+              <AccountInsights />
+            </div>
+          </Container>
+        </div>
+        {
+          hasHeader() ? '' : <Header type={"footerr"} />
+        }
+      </StyleWrapper>
+    </AuditContext.Provider>
+      :
       <></>
   );
 }

@@ -7,6 +7,7 @@ import AcSize from "./sections/AcSize";
 import BoxEl from "./sections/BoxEl";
 import AcInfo from "./sections/AcInfo";
 import Score from "./sections/Score";
+import logo from "../../images/logo.png";
 
 // Images
 import screen from "../../images/icons/screen.png";
@@ -288,6 +289,7 @@ const AuditScore = () => {
 
   return (
     <StyleWrapper>
+      <img className='totalPages' src={logo} alt="logo" />
       <AcInfo />
       <Score score={score} />
       <Section>
