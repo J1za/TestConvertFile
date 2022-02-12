@@ -33,9 +33,10 @@ const Container = styled.div`
 export const AuditContext = createContext(0);
 
 function App() {
-  const [auditData, setData] = useState();
-  const [heightDoc, setHeightDoc] = useState();
 
+  const [auditData, setData] = useState();
+  
+  const [heightDoc, setHeightDoc] = useState();
   useEffect(() => {
     // const windowParams = window.location.href.split('/');
     // const reportID = windowParams[windowParams.length - 1];

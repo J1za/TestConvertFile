@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from "prop-types";
 import styled from 'styled-components';
 
@@ -69,16 +69,22 @@ const Header = ({ type, title, heightDoc }) => {
   const overlay = document.getElementById("overlay");
   const [isModalOpen, setOpen] = useState(false);
 
+  const [pageHeight, setPageHeight] = useState();
+
+  useEffect(() => {
+    setPageHeight(heightDoc)
+  }, [heightDoc])
+
   const openModal = () => {
     overlay.classList.add('overlay');
     setOpen(true)
   }
 
+
   const closeModal = () => {
     overlay.classList.remove('overlay');
     setOpen(false);
   }
-
   const exportPdf = async () => {
     let convertApi = ConvertApi.auth({ secret: 'UGErrqAKex5ElxZ5' })
     let params = convertApi.createParams()
@@ -89,7 +95,7 @@ const Header = ({ type, title, heightDoc }) => {
     params.add('PageRange', '1');
     params.add('MarginTop', '30');
     params.add('PageSize', 'ledger');
-    params.add('PageHeight', heightDoc / 2.95);
+    params.add('PageHeight', pageHeight / 2.95);
     params.add('Header', LogoPdfFile);
 
     setDownloading(true);
