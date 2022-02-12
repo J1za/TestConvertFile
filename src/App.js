@@ -1,7 +1,7 @@
 import React, { useState, useEffect, createContext } from 'react'
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet'
-
+import { ReactHeight } from 'react-height';
 // Components
 import Header from "./components/Header";
 import AuditScore from "./components/auditScore/AuditScore";
@@ -54,11 +54,6 @@ function App() {
       })
       .catch(e => console.log(e));
   }, [])
-  useEffect(() => {
-    const height = document.getElementById('doc')?.clientHeight;
-    setHeightDoc({ height });
-    console.log(heightDoc)
-  }, [])
 
 
   function hasHeader() {
@@ -75,21 +70,25 @@ function App() {
       </Helmet>
       <StyleWrapper id="body">
         {
-          hasHeader() ? '' : <Header type={"header"} title={auditData.accountName} />
+          hasHeader() ? '' : <Header heightDoc={heightDoc} type={"header"} title={auditData.accountName} />
         }
-        <div id="document">
-          <Container id="container">
-            <div id="doc">
-              <div id="first">
-                <AuditScore />
+        <ReactHeight onHeightReady={height => setHeightDoc(height)}>
+          <div id="document">
+            <Container id="container">
+
+              <div id="doc">
+                <div id="first">
+                  <AuditScore />
+                </div>
+                <PerformaneAudit />
+                <QualityScoreAudit />
+                <AccountStructureAudit />
+                <AccountInsights />
               </div>
-              <PerformaneAudit />
-              <QualityScoreAudit />
-              <AccountStructureAudit />
-              <AccountInsights />
-            </div>
-          </Container>
-        </div>
+
+            </Container>
+          </div>
+        </ReactHeight>
         {
           hasHeader() ? '' : <Header type={"footerr"} />
         }
