@@ -85,7 +85,7 @@ const Header = ({type, title}) => {
     params.add('ConversionDelay', '7');
     params.add('HideElements', '.header');
     setDownloading(true);
-    let result = await convertApi.convert('web', 'pdf', params)
+    let result = await convertApi.convert('html', 'pdf', params)
     downloadPdf(result.dto.Files[0].Url)
     setDownloading(false);
   }
