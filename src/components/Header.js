@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import PropTypes from "prop-types";
 import styled from 'styled-components';
 
@@ -59,10 +59,9 @@ const Controls = styled.div`
   }
 `
 
-// const ConvertApi = window.ConvertApi;
-const SejdaJsApi = window.SejdaJsApi;
+const ConvertApi = window.ConvertApi;
 
-const Header = ({ type }) => {
+const Header = ({type, title}) => {
   // eslint-disable-next-line no-unused-vars
   const [downloading, setDownloading] = useState(false);
   const overlay = document.getElementById("overlay");
@@ -79,50 +78,35 @@ const Header = ({ type }) => {
   }
 
   const exportPdf = async () => {
-    await SejdaJsApi.htmlToPdf({
-      filename: 'out.pdf',
-      /* leave blank for one long page */
-      pageSize: 'a4',
-      publishableKey: 'api_public_y0urap1k3yh3r3',
-      htmlCode: document.querySelector('html').innerHTML,
-      /* url: window.location.href */
-      always: function () {
-        // PDF download should have started
-      },
-      error: function (err) {
-        console.error(err);
-        alert('An error occurred');
-      }
-    });
-    // let convertApi = ConvertApi.auth({ secret: 'UGErrqAKex5ElxZ5' })
-    // let params = convertApi.createParams()
-    // params.add('Url', window.location.href + '?no_header');
-    // params.add('FileName', 'Audit report for ' + title);
-    // params.add('ConversionDelay', '7');
-    // params.add('HideElements', '.header');
-    // setDownloading(true);
-    // let result = await convertApi.convert('web', 'pdf', params)
-    // downloadPdf(result.dto.Files[0].Url)
-    // setDownloading(false);
+    let convertApi = ConvertApi.auth({secret: 'KBHoxKg3ER2bLvkr'})
+    let params = convertApi.createParams()
+    params.add('Url', window.location.href + '?no_header');
+    params.add('FileName', 'Audit report for ' + title);
+    params.add('ConversionDelay', '7');
+    params.add('HideElements', '.header');
+    setDownloading(true);
+    let result = await convertApi.convert('web', 'pdf', params)
+    downloadPdf(result.dto.Files[0].Url)
+    setDownloading(false);
   }
 
-  // const downloadPdf = (link) => {
-  //   window.location.href = link;
-  // }
+  const downloadPdf = (link) => {
+    window.location.href = link;
+  }
 
   return (
-    <StyleWrapper className="header" style={{ backgroundColor: type === 'footer' ? "#fff" : '#223D9E' }}>
+    <StyleWrapper className="header" style={{backgroundColor: type === 'footer' ? "#fff" : '#223D9E'}}>
       <Container>
-        <a href="#"><img src={logo} alt="logo" /></a>
+        <a href="#"><img src={logo} alt="logo"/></a>
         {
           type === 'header' ? <Controls>
-            <img onClick={openModal} className="share" src={share} alt="share icon" />
+            <img onClick={openModal} className="share" src={share} alt="share icon"/>
             {
-              downloading ? <Downloading>Downloading...</Downloading> : <PdfExportBtn style={{ cursor: 'pointer' }} onClick={exportPdf}><img src={pdf} alt="pdf export" /> <p>Export pdf</p></PdfExportBtn>
+              downloading ? <Downloading>Downloading...</Downloading> : <PdfExportBtn style={{cursor: 'pointer'}} onClick={exportPdf}><img src={pdf} alt="pdf export"/> <p>Export pdf</p></PdfExportBtn>
             }
           </Controls>
             :
-            ''
+          ''
         }
 
         {
