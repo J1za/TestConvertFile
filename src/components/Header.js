@@ -84,6 +84,7 @@ const Header = ({type, title}) => {
     params.add('FileName', 'Audit report for ' + title);
     params.add('ConversionDelay', '7');
     params.add('HideElements', '.header');
+    params.add('PageRange', '1');
     setDownloading(true);
     let result = await convertApi.convert('web', 'pdf', params)
     downloadPdf(result.dto.Files[0].Url)
