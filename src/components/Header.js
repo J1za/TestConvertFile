@@ -86,14 +86,13 @@ const Header = ({type, title}) => {
     params.add('HideElements', '.header');
     setDownloading(true);
     let result = await convertApi.convert('web', 'pdf', params)
-    console.log(result.dto)
-    // downloadPdf(result.dto.Files[0].Url)
+    downloadPdf(result.dto.Files[0].Url)
     setDownloading(false);
   }
 
-  // const downloadPdf = (link) => {
-  //   window.location.href = link;
-  // }
+  const downloadPdf = (link) => {
+    window.location.href = link;
+  }
 
   return (
     <StyleWrapper className="header" style={{backgroundColor: type === 'footer' ? "#fff" : '#223D9E'}}>
