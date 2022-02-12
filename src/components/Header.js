@@ -87,7 +87,6 @@ const Header = ({ type, title }) => {
     params.add('PageSize', 'legal');
     params.add('PageRange', '1');
     params.add('PageHeight', '1750');
-    params.add('Header', logo);
 
     setDownloading(true);
     let result = await convertApi.convert('web', 'pdf', params)
