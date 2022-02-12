@@ -34,7 +34,7 @@ export const AuditContext = createContext(0);
 
 function App() {
   const [auditData, setData] = useState();
-
+  const [heightDoc, setHeightDoc] = useState();
 
   useEffect(() => {
     // const windowParams = window.location.href.split('/');
@@ -51,9 +51,13 @@ function App() {
       .then(res => res.json())
       .then(data => {
         setData(data.data[0])
-        
       })
       .catch(e => console.log(e));
+  }, [])
+  useEffect(() => {
+    const height = document.getElementById('doc')?.clientHeight;
+    setHeightDoc({ height });
+    console.log(heightDoc)
   }, [])
 
 
