@@ -1,0 +1,775 @@
+{
+  "data": [
+    {
+      "currency": "$",
+      "accountName": "John Doe",
+      "accountNumber": 1234567890,
+      "data": "April 5th 2021",
+      "auditScore": {
+        "overallScore": {
+          "score": 76,
+          "performanceAudit": {
+            "first": 70,
+            "sub": [
+              30,
+              70,
+              70
+            ]
+          },
+          "qualityScoreAudit": {
+            "first": 30,
+            "sub": [
+              30,
+              70,
+              70
+            ],
+            "accountStructureAudit": {
+              "first": 50,
+              "sub": [
+                30,
+                40,
+                50,
+                60,
+                50,
+                40,
+                30
+              ]
+            }
+          },
+          "keyFindings": {
+            "first": {
+              "lost": 34,
+              "potentialGains": [
+                654,
+                108,
+                12000
+              ]
+            },
+            "issues": {
+              "failedAreas": 11,
+              "criticalIssues": 35
+            }
+          },
+          "accountSize": {
+            "campaigns": {
+              "searchCampaigns": 5,
+              "shoppingCampaigns": 5,
+              "displayCampaigns": 1,
+              "otherCampaigns": 0
+            },
+            "ads": {
+              "textAds": 5,
+              "responsiveAds": 5,
+              "responsiveDisplayAds": 5,
+              "dsaAds": 2,
+              "imageAds": 1,
+              "otherAds": 3
+            },
+            "keywords": {
+              "searchKeywords": 5
+            }
+          },
+          "performance": {
+            "clicks": 8972000,
+            "ctr": 10.3,
+            "impr": 280000,
+            "cost": 23600,
+            "conv": 309000,
+            "convRate": 99.8,
+            "costPerConv": 158000,
+            "convValue": 838000
+          }
+        },
+        "performanceAudit": {
+          "searchTraffic": {
+            "missed": {
+              "biddingAndQuality": 20,
+              "budgetLimitations": 10,
+              "acquired": 65
+            },
+            "tableData": {
+              "impressions": [
+                12345,
+                3986,
+                1342
+              ],
+              "clicks": [
+                389,
+                87,
+                23
+              ],
+              "conversions": [
+                34,
+                4,
+                1
+              ],
+              "conversionsValue": [
+                500,
+                57,
+                4
+              ]
+            }
+          },
+          "conversions": {
+            "keywords": 10,
+            "segments": 1,
+            "campaigns": 2,
+            "accountScore": 5
+          },
+          "wastedSpend": {
+            "landingPages": {
+              "sum": 3400,
+              "num": 2
+            },
+            "keywords": {
+              "sum": 874,
+              "num": 5
+            },
+            "searchTerms": {
+              "sum": 2100,
+              "num": 8
+            },
+            "automaticPlacements": {
+              "sum": 4500,
+              "numL": 3
+            }
+          },
+          "boostPerformance": {
+            "ads": [
+              300,
+              50,
+              5000
+            ],
+            "networkSettings": {
+              "campaigns": 10,
+              "money": [
+                3,
+                8
+              ]
+            },
+            "mobileTraffic": {
+              "campaigns": 10,
+              "money": [
+                3,
+                8
+              ]
+            },
+            "userLocation": {
+              "campaigns": 10,
+              "money": [
+                3,
+                8
+              ]
+            }
+          }
+        },
+        "qualityScoreAudit": {
+          "qualityScore": 5,
+          "ctr": 1,
+          "adRelevance": 2,
+          "pageExperience": 3,
+          "keywordQualityScoreDist": {
+            "number": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "spend": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          }
+        },
+        "accountStructureAudit": {
+          "campaignSettings": {
+            "searchDisplay": 3,
+            "brandImage": 0,
+            "cpc": 2,
+            "budgets": 4
+          },
+          "keywords": {
+            "stopped": 1,
+            "formatProblems": 2,
+            "duplicate": 0,
+            "disapproved": 2,
+            "relevancyIssues": 4,
+            "activeAdGroups": 2,
+            "terms": 2,
+            "new": 2
+          },
+          "negativeKeywords": {
+            "negativeKeyw": 2,
+            "refactored": 3,
+            "unused": 2
+          },
+          "landingPages": {
+            "brokenUrls": 2,
+            "httpCount": 0,
+            "httpRedirect": 4
+          },
+          "ads": {
+            "duplicate": 2,
+            "inactive": 0,
+            "abTested": 2,
+            "optimumNum": 3,
+            "outdated": 2,
+            "availableSpaceUsed": 2,
+            "responsiveSearch": 0,
+            "rsa": 1,
+            "hqAds": 2,
+            "eligibleTests": 2,
+            "activeImageTests": 0,
+            "scheduling": 2
+          },
+          "adExtensions": {
+            "siteLink": 0,
+            "callout": 2,
+            "structuredSnipped": 1,
+            "enough": 3,
+            "calloutExtension": 3,
+            "structuredSnippedExtension": 2
+          },
+          "criticalIssues": {
+            "brokenUrls": 125,
+            "keywordsConflict": 14,
+            "unapprovedAds": 36,
+            "unapprovedKeywords": 47
+          }
+        },
+        "accountInsights": {
+          "searchDisplayPerformace": {
+            "searchPerformance": {
+              "clicks": 126,
+              "impr": 13254,
+              "ctr": 0.95,
+              "avgCpc": 1.43,
+              "cost": 180.66,
+              "conv": 2.72,
+              "convRate": 2.18,
+              "costConv": 65.86,
+              "convValue": 3047.58,
+              "convValueCost": 16
+            },
+            "displayPerformance": {
+              "clicks": 126,
+              "impr": 13254,
+              "ctr": 0.95,
+              "avgCpc": 1.43,
+              "cost": 180.66,
+              "conv": 2.72,
+              "convRate": 2.18,
+              "costConv": 65.86,
+              "convValue": 3047.58,
+              "convValueCost": 16
+            }
+          },
+          "searchImpressionsPosition": {
+            "firstPosition": 53,
+            "aboveOrganicListing": 35,
+            "belowOrganicListing": 12
+          },
+          "costConvAnalysis": {
+            "keywordCount": {
+              "withConversion": 5123,
+              "withoutConversion": 10864
+            },
+            "keywordSpend": {
+              "withConversion": 1512,
+              "withoutConversion": 9847
+            }
+          },
+          "activeKeywordMatchDist": {
+            "exact": {
+              "keywords": 1234,
+              "keywordsPercent": 38,
+              "clicks": 3630,
+              "impr": 47502,
+              "ctr": 7.64,
+              "avgCpc": 0.39,
+              "cost": 1423,
+              "conv": 360,
+              "costConv": 3.97,
+              "convRate": 9.94,
+              "convValue": 4697,
+              "convValueCost": 15
+            },
+            "phrase": {
+              "keywords": 1234,
+              "keywordsPercent": 38,
+              "clicks": 3630,
+              "impr": 47502,
+              "ctr": 7.64,
+              "avgCpc": 0.39,
+              "cost": 1423,
+              "conv": 360,
+              "costConv": 3.97,
+              "convRate": 9.94,
+              "convValue": 4697,
+              "convValueCost": 15
+            },
+            "broad": {
+              "keywords": 1234,
+              "keywordsPercent": 38,
+              "clicks": 3630,
+              "impr": 47502,
+              "ctr": 7.64,
+              "avgCpc": 0.39,
+              "cost": 1423,
+              "conv": 360,
+              "costConv": 3.97,
+              "convRate": 9.94,
+              "convValue": 4697,
+              "convValueCost": 15
+            },
+            "broadPlus": {
+              "keywords": 1234,
+              "keywordsPercent": 38,
+              "clicks": 3630,
+              "impr": 47502,
+              "ctr": 7.64,
+              "avgCpc": 0.39,
+              "cost": 1423,
+              "conv": 360,
+              "costConv": 3.97,
+              "convRate": 9.94,
+              "convValue": 4697,
+              "convValueCost": 15
+            }
+          },
+          "negativeKeywordsDist": {
+            "campaignNegatives": {
+              "broad": 7,
+              "phrase": 2,
+              "exact": 584
+            },
+            "adGroupNegatives": {
+              "broad": 7,
+              "phrase": 2,
+              "exact": 584
+            },
+            "listNegatives": {
+              "broad": 7,
+              "phrase": 2,
+              "exact": 584
+            }
+          },
+          "adExtensionsBreakdown": {
+            "chartMoneyData": {
+              "siteLinks": {
+                "withExtensions": 56123,
+                "withoutExtensions": 216801
+              },
+              "callExt": {
+                "withExtensions": 56123,
+                "withoutExtensions": 216801
+              },
+              "calloutExt": {
+                "withExtensions": 56123,
+                "withoutExtensions": 216801
+              },
+              "locationExt": {
+                "withExtensions": 56123,
+                "withoutExtensions": 216801
+              },
+              "promotionExt": {
+                "withExtensions": 56123,
+                "withoutExtensions": 216801
+              },
+              "structuredSnipped": {
+                "withExtensions": 56123,
+                "withoutExtensions": 216801
+              }
+            },
+            "enabledCampaignsWith": {
+              "siteLink": 0,
+              "callExt": 0,
+              "calloutExt": 0,
+              "locationExt": 0,
+              "promotionEx": 0,
+              "structuredSnipped": 0
+            },
+            "enabledCampaignsWithout": {
+              "siteLink": 0,
+              "callExt": 0,
+              "calloutExt": 0,
+              "locationExt": 0,
+              "promotionEx": 0,
+              "structuredSnipped": 0
+            }
+          },
+          "campaignUsageBidAdj": {
+            "desktop": 2,
+            "mobile": 3,
+            "tablet": 0,
+            "targetLocation": 5,
+            "adSchedule": 1,
+            "audience": 9,
+            "age": 1,
+            "gender": 0,
+            "parental": 1
+          },
+          "adTestingCoverage": {
+            "numberAds": {
+              "tested": 835,
+              "notTested": 165
+            },
+            "adsSpend": {
+              "tested": 750,
+              "notTested": 250
+            }
+          },
+          "rsa": {
+            "percentageOfAdGroups": {
+              "clicks": 50,
+              "convRate": 50,
+              "ctr": 10,
+              "cpc": 0
+            },
+            "distributionOfRsa": {
+              "poor": 50,
+              "average": 10,
+              "good": 50,
+              "excellent": 0
+            }
+          },
+          "segmentsPerforamnce": {
+            "devices": {
+              "clicks": [
+                40,
+                50,
+                60
+              ],
+              "impr": [
+                40,
+                50,
+                60
+              ],
+              "ctr": [
+                40,
+                50,
+                60
+              ],
+              "avgCpc": [
+                40,
+                50,
+                60
+              ],
+              "cost": [
+                40,
+                50,
+                60
+              ],
+              "conv": [
+                40,
+                50,
+                60
+              ],
+              "convRate": [
+                40,
+                50,
+                60
+              ],
+              "costConv": [
+                40,
+                50,
+                60
+              ],
+              "convVal": [
+                40,
+                50,
+                60
+              ],
+              "convValCost": [
+                40,
+                50,
+                60
+              ],
+              "valConv": [
+                40,
+                50,
+                60
+              ]
+            },
+            "userLocation": {
+              "clicks": [
+                40,
+                50
+              ],
+              "impr": [
+                40,
+                50
+              ],
+              "ctr": [
+                40,
+                50
+              ],
+              "avgCpc": [
+                40,
+                50
+              ],
+              "cost": [
+                40,
+                50
+              ],
+              "conv": [
+                40,
+                50
+              ],
+              "convRate": [
+                40,
+                50
+              ],
+              "costConv": [
+                40,
+                50
+              ],
+              "convVal": [
+                40,
+                50
+              ],
+              "convValCost": [
+                40,
+                50
+              ],
+              "valConv": [
+                40,
+                50
+              ]
+            },
+            "age": {
+              "clicks": [
+                40,
+                50,
+                60,
+                60,
+                40,
+                50,
+                60,
+                60
+              ],
+              "impr": [
+                40,
+                50,
+                60,
+                40,
+                50,
+                60,
+                60
+              ],
+              "ctr": [
+                40,
+                50,
+                60,
+                40,
+                50,
+                60,
+                60
+              ],
+              "avgCpc": [
+                40,
+                50,
+                60,
+                40,
+                50,
+                60,
+                60
+              ],
+              "cost": [
+                40,
+                50,
+                60,
+                40,
+                50,
+                60,
+                60
+              ],
+              "conv": [
+                40,
+                50,
+                60,
+                40,
+                50,
+                60,
+                60
+              ],
+              "convRate": [
+                40,
+                50,
+                60,
+                40,
+                50,
+                60,
+                60
+              ],
+              "costConv": [
+                40,
+                50,
+                60,
+                40,
+                50,
+                60,
+                60
+              ],
+              "convVal": [
+                40,
+                50,
+                60,
+                40,
+                50,
+                60,
+                60
+              ],
+              "convValCost": [
+                40,
+                50,
+                60,
+                40,
+                50,
+                60,
+                60
+              ],
+              "valConv": [
+                40,
+                50,
+                60,
+                40,
+                50,
+                60,
+                60
+              ]
+            },
+            "gender": {
+              "clicks": [
+                40,
+                50,
+                60
+              ],
+              "impr": [
+                40,
+                50,
+                60
+              ],
+              "ctr": [
+                40,
+                50,
+                60
+              ],
+              "avgCpc": [
+                40,
+                50,
+                60
+              ],
+              "cost": [
+                40,
+                50,
+                60
+              ],
+              "conv": [
+                40,
+                50,
+                60
+              ],
+              "convRate": [
+                40,
+                50,
+                60
+              ],
+              "costConv": [
+                40,
+                50,
+                60
+              ],
+              "convVal": [
+                40,
+                50,
+                60
+              ],
+              "convValCost": [
+                40,
+                50,
+                60
+              ],
+              "valConv": [
+                40,
+                50,
+                60
+              ]
+            },
+            "Parental": {
+              "clicks": [
+                40,
+                50,
+                60
+              ],
+              "impr": [
+                40,
+                50,
+                60
+              ],
+              "ctr": [
+                40,
+                50,
+                60
+              ],
+              "avgCpc": [
+                40,
+                50,
+                60
+              ],
+              "cost": [
+                40,
+                50,
+                60
+              ],
+              "conv": [
+                40,
+                50,
+                60
+              ],
+              "convRate": [
+                40,
+                50,
+                60
+              ],
+              "costConv": [
+                40,
+                50,
+                60
+              ],
+              "convVal": [
+                40,
+                50,
+                60
+              ],
+              "convValCost": [
+                40,
+                50,
+                60
+              ],
+              "valConv": [
+                40,
+                50,
+                60
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}
