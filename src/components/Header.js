@@ -68,7 +68,7 @@ const Header = ({ type, title, heightDoc }) => {
   const [downloading, setDownloading] = useState(false);
   const overlay = document.getElementById("overlay");
   const [isModalOpen, setOpen] = useState(false);
-
+// eslint-disable-next-line no-unused-vars
   const [pageHeight, setPageHeight] = useState();
 
   useEffect(() => {
@@ -95,18 +95,19 @@ const Header = ({ type, title, heightDoc }) => {
     params.add('PageRange', '1');
     params.add('MarginTop', '30');
     params.add('PageSize', 'ledger');
-    params.add('PageHeight', pageHeight / 2.95);
+    params.add('PageHeight', 3100);
     params.add('Header', LogoPdfFile);
 
     setDownloading(true);
     let result = await convertApi.convert('web', 'pdf', params)
-    downloadPdf(result.dto.Files[0].Url)
+    console.log(result)
+    // downloadPdf(result.dto.Files[0].Url)
     setDownloading(false);
   }
 
-  const downloadPdf = (link) => {
-    window.location.href = link;
-  }
+  // const downloadPdf = (link) => {
+  //   window.location.href = link;
+  // }
 
   return (
     <StyleWrapper className="header" style={{ backgroundColor: type === 'footer' ? "#fff" : '#223D9E' }}>
