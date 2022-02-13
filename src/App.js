@@ -85,7 +85,6 @@ function App() {
                 <QualityScoreAudit />
                 <AccountStructureAudit />
                 <AccountInsights />
-                <AccountInsights />
               </div>
 
             </Container>
