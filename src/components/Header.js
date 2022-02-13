@@ -70,9 +70,8 @@ const Header = ({ type, title, heightDoc }) => {
   const [isModalOpen, setOpen] = useState(false);
   // eslint-disable-next-line no-unused-vars
   const [pageHeight, setPageHeight] = useState();
-  
   useEffect(() => {
-    setPageHeight(Math.round(heightDoc / 4))
+    setPageHeight(Math.round(heightDoc / 4.5))
   }, [heightDoc])
 
   const openModal = () => {
@@ -85,6 +84,7 @@ const Header = ({ type, title, heightDoc }) => {
     overlay.classList.remove('overlay');
     setOpen(false);
   }
+
   const exportPdf = async () => {
     let convertApi = ConvertApi.auth({ secret: 'UGErrqAKex5ElxZ5' })
     let params = convertApi.createParams()
@@ -94,6 +94,7 @@ const Header = ({ type, title, heightDoc }) => {
     params.add('HideElements', '.header');
     params.add('PageRange', '1');
     params.add('MarginTop', '30');
+    params.add('PageSize', 'a3');
     params.add('PageHeight', pageHeight);
     params.add('Header', LogoPdfFile);
 
