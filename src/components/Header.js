@@ -71,7 +71,7 @@ const Header = ({ type, title, heightDoc }) => {
   // eslint-disable-next-line no-unused-vars
   const [pageHeight, setPageHeight] = useState();
   useEffect(() => {
-    setPageHeight(Math.round(heightDoc / 4.6))
+    setPageHeight(Math.round(heightDoc / 4.55))
   }, [heightDoc])
 
   const openModal = () => {
