@@ -2,6 +2,7 @@ import React, { useState, useEffect, createContext } from 'react'
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet'
 import { ReactHeight } from 'react-height';
+
 // Components
 import Header from "./components/Header";
 import AuditScore from "./components/auditScore/AuditScore";
@@ -76,7 +77,6 @@ function App() {
         <ReactHeight onHeightReady={height => setHeightDoc(height)}>
           <div id="document">
             <Container id="container">
-
               <div id="doc">
                 <div id="first">
                   <AuditScore />

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, {useContext} from 'react';
 import styled from 'styled-components';
 
 // Components
@@ -7,7 +7,6 @@ import AcSize from "./sections/AcSize";
 import BoxEl from "./sections/BoxEl";
 import AcInfo from "./sections/AcInfo";
 import Score from "./sections/Score";
-import logo from "../../images/logo.png";
 
 // Images
 import screen from "../../images/icons/screen.png";
@@ -29,8 +28,8 @@ import bag from "../../images/icons/svg-icons/conversions.svg";
 import rate from "../../images/icons/svg-icons/conversion rate.svg";
 import costConv from "../../images/icons/svg-icons/cost per conversion.svg";
 import graph from "../../images/icons/svg-icons/conversion value.svg";
-import { AuditContext } from "../../App";
-import { kFormatter } from "../../utilityFunctions";
+import {AuditContext} from "../../App";
+import {kFormatter} from "../../utilityFunctions";
 
 const StyleWrapper = styled.div`
   background: #fff;
@@ -277,7 +276,7 @@ const AuditScore = () => {
     },
     {
       icon: costConv,
-      text: <span>Cost/<br />conv.</span>,
+      text: <span>Cost/<br/>conv.</span>,
       value: auditData.currency + kFormatter(auditData.performance.costPerConv)
     },
     {
@@ -289,8 +288,7 @@ const AuditScore = () => {
 
   return (
     <StyleWrapper>
-      <img className='totalPages' src={logo} alt="logo" />
-      <AcInfo />
+      <AcInfo/>
       <Score score={score} />
       <Section>
         <h3>Key Findings</h3>
@@ -301,7 +299,7 @@ const AuditScore = () => {
 
       <Section>
         <h3>Account Size</h3>
-        <AcSize acSize={acSize} />
+        <AcSize acSize={acSize}/>
       </Section>
 
       <Section>

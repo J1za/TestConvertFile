@@ -68,7 +68,7 @@ const Header = ({ type, title, heightDoc }) => {
   const [downloading, setDownloading] = useState(false);
   const overlay = document.getElementById("overlay");
   const [isModalOpen, setOpen] = useState(false);
-  // eslint-disable-next-line no-unused-vars
+
   const [pageHeight, setPageHeight] = useState();
   useEffect(() => {
     setPageHeight((heightDoc / 4.48).toFixed())
