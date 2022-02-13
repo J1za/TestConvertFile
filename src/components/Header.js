@@ -72,7 +72,7 @@ const Header = ({ type, title, heightDoc }) => {
   const [pageHeight, setPageHeight] = useState();
   console.log(pageHeight)
   useEffect(() => {
-    setPageHeight((heightDoc / 4.55).toFixed())
+    setPageHeight((heightDoc / 4.4).toFixed())
   }, [heightDoc])
 
   const openModal = () => {
