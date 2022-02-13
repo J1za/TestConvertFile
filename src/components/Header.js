@@ -68,10 +68,10 @@ const Header = ({ type, title, heightDoc }) => {
   const [downloading, setDownloading] = useState(false);
   const overlay = document.getElementById("overlay");
   const [isModalOpen, setOpen] = useState(false);
-// eslint-disable-next-line no-unused-vars
+  // eslint-disable-next-line no-unused-vars
   const [pageHeight, setPageHeight] = useState();
   useEffect(() => {
-    setPageHeight(heightDoc)
+    setPageHeight(heightDoc / 2.9)
   }, [heightDoc])
 
   const openModal = () => {
@@ -93,7 +93,7 @@ const Header = ({ type, title, heightDoc }) => {
     params.add('HideElements', '.header');
     params.add('PageRange', '1');
     params.add('MarginTop', '30');
-    params.add('PageSize', 'legal');
+    params.add('PageSize', 'a4');
     params.add('PageHeight', pageHeight);
     params.add('Header', LogoPdfFile);
 
