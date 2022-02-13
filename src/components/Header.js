@@ -70,7 +70,6 @@ const Header = ({ type, title, heightDoc }) => {
   const [isModalOpen, setOpen] = useState(false);
 // eslint-disable-next-line no-unused-vars
   const [pageHeight, setPageHeight] = useState();
-
   useEffect(() => {
     setPageHeight(heightDoc)
   }, [heightDoc])
@@ -90,12 +89,12 @@ const Header = ({ type, title, heightDoc }) => {
     let params = convertApi.createParams()
     params.add('Url', window.location.href + '?no_header');
     params.add('FileName', 'Audit report for ' + title);
-    params.add('ConversionDelay', '7');
+    params.add('ConversionDelay', '2');
     params.add('HideElements', '.header');
     params.add('PageRange', '1');
     params.add('MarginTop', '30');
-    params.add('PageSize', 'ledger');
-    params.add('PageHeight', 3100);
+    params.add('PageSize', 'legal');
+    params.add('PageHeight', pageHeight);
     params.add('Header', LogoPdfFile);
 
     setDownloading(true);
