@@ -86,17 +86,17 @@ const Header = ({ type, title, heightDoc }) => {
   }
 
   const exportPdf = async () => {
-    let convertApi = ConvertApi.auth({ secret: 'UGErrqAKex5ElxZ5' })
+    let convertApi = ConvertApi.auth({ secret: 'KBHoxKg3ER2bLvkr' })
     let params = convertApi.createParams()
     params.add('Url', window.location.href + '?no_header');
     params.add('FileName', 'Audit report for ' + title);
-    params.add('ConversionDelay', '2');
+    params.add('ConversionDelay', '7');
     params.add('HideElements', '.header');
     params.add('PageRange', '1');
-    params.add('MarginTop', '30');
+    params.add('MarginTop', '0');
     params.add('PageSize', 'a3');
     params.add('PageHeight', pageHeight);
-    params.add('Header', LogoPdfFile);
+//     params.add('Header', LogoPdfFile);
 
     setDownloading(true);
     let result = await convertApi.convert('web', 'pdf', params)

@@ -39,22 +39,22 @@ function App() {
   
   const [heightDoc, setHeightDoc] = useState();
   useEffect(() => {
-    // const windowParams = window.location.href.split('/');
-    // const reportID = windowParams[windowParams.length - 1];
+    const windowParams = window.location.href.split('/');
+    const reportID = windowParams[windowParams.length - 1];
 
-    // fetch(`/rest/api/audit-report/${reportID}`)
-    //   .then(res => res.json())
-    //   .then(data => {
-    //     setData(data)
-    //   })
-    //   .catch(e => console.log(e));
-
-    fetch(`https://mocki.io/v1/897a9996-ae8e-46f4-8a5c-b7aed57ce526`)
+    fetch(`/rest/api/audit-report/${reportID}`)
       .then(res => res.json())
       .then(data => {
-        setData(data.data[0])
+        setData(data)
       })
       .catch(e => console.log(e));
+
+//     fetch(`https://mocki.io/v1/897a9996-ae8e-46f4-8a5c-b7aed57ce526`)
+//       .then(res => res.json())
+//       .then(data => {
+//         setData(data.data[0])
+//       })
+//       .catch(e => console.log(e));
   }, [])
 
 
