@@ -94,7 +94,7 @@ const Header = ({ type, title, heightDoc }) => {
     params.add('ConversionDelay', '7');
     params.add('HideElements', '.header');
     params.add('PageRange', '1');
-    params.add('MarginTop', '0');
+    params.add('MarginTop', '50');
     params.add('PageSize', 'a3');
     params.add('PageHeight', pageHeight);
 //     params.add('Header', LogoPdfFile);
