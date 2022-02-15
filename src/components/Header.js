@@ -39,7 +39,7 @@ const PdfExportBtn = styled.div`
   height: 47px
   cursor: pointer;
   justify-content: center;
-  width: 155px;
+  padding: 0 15px;
   color: #fff;
   font-family: 'NeutrifPro-SemiBold';
 `
@@ -117,10 +117,10 @@ const Header = ({ type, title, heightDoc }) => {
       <Container>
         <a href="#"><img src={logo} alt="logo" /></a>
         {
-          type === 'header' ? <Controls>
+          type === 'header' ? <Controls style={{flexWrap: 'wrap', gridRowGap: '20px'}}>
             <img onClick={openModal} className="share" src={share} alt="share icon" />
             {
-              downloading ? <Downloading>Downloading...</Downloading> : <><PdfExportBtn style={{ cursor: 'pointer' }} onClick={exportPdf}><img src={pdf} alt="pdf export" /> <p>Export pdf</p></PdfExportBtn> <PdfExportBtn style={{ cursor: 'pointer', marginLeft: '20px' }} onClick={() => exportPdf('print')}><img src={pdf} alt="pdf print" /> <p>Print pdf</p></PdfExportBtn> </>
+              downloading ? <Downloading style={{display: 'flex', alignItems: 'center'}}>Downloading...</Downloading> : <><PdfExportBtn style={{ cursor: 'pointer', marginRight: '20px' }} onClick={exportPdf}><img src={pdf} alt="pdf export" /> <p>Export pdf</p></PdfExportBtn> <PdfExportBtn style={{ cursor: 'pointer' }} onClick={() => exportPdf('print')}><img src={pdf} alt="pdf print" /> <p>Export original pdf</p></PdfExportBtn> </>
             }
           </Controls>
             :
